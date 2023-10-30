@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <style>
+                                    /* Estilos para el menú */
+                                    ul {
+                                    list-style-type: none;
+                                    padding: 0;
+                                    margin: 0;
+                                    background-color: #333; /* Fondo del menú */
+                                    display: flex; /* Muestra los elementos del menú en línea */
+                                    align-items: center; /* Centra verticalmente los elementos */
+                                    }
+                                
+                                    li {
+                                    margin: 0 10px; /* Espacio entre los elementos del menú */
+                                    }
+                                
+                                    li a {
+                                    color: #fff; /* Color del texto del menú */
+                                    text-decoration: none;
+                                    }
+                                
+                                    li a:hover {
+                                    text-decoration: underline; /* Subraya el texto cuando se pasa el cursor por encima */
+                                    }
+                                
+                                    /* Estilos para la imagen a la izquierda */
+                                    .imagen-izquierda {
+                                    margin-right: 20px; /* Espacio entre la imagen y el menú */
+                                    }
+                        
+                                    .centrado {
+                                    text-align: center;
+                                    }
+
+                                    .form-container {
+                                    display: grid;
+                                    grid-template-columns: repeat(3, 1fr);
+                                    gap: 10px;
+                                    }
+                                    .form-column {
+                                    grid-column: span 1;
+                                    }
+
+                                    .contenedor {
+                                    display: flex;
+                                    }
+                                
+                                    .imagen {
+                                    float: right; /* Coloca la imagen a la derecha */
+                                    }
+                                
+                                    .cuadro {
+                                    background-color: #72cec9; /* Fondo gris claro */
+                                    color: #ffffff; /* Texto negro */
+                                    padding: 10px; /* Espacio alrededor del cuadro */
+                                    margin-top: 10px; /* Espacio superior entre la imagen y el cuadro */
+                                    clear: right; /* Asegura que el cuadro no flote a la derecha de la imagen */
+                                    }
+
+                                
+                                    .izquierda2 {
+                                    flex: 1; /* Ocupa todo el espacio disponible a la izquierda */
+                                    padding: 20px;
+                                    background-color: #72cec9; /* Fondo gris claro */
+                                    }
+                                
+
+                                    .derecha3 {
+                                        
+                                    flex: 1; /* Ocupa todo el espacio disponible a la izquierda */
+                                    padding: 20px;
+                                    background-color: #313838; /* Fondo gris claro */
+                                    color: #fff;
+                                    }                            
+                                    .cuadro3 {
+                                        width: 50%; /* Ocupa la mitad del ancho del contenedor */
+                                      background-color: #394140; /* Fondo gris claro */
+                                      color: #ffffff; /* Texto negro */
+                                      flex: 0;
+                                      grid-template-columns: repeat(2, 1fr);
+                                      padding: 10px; /* Espacio alrededor del cuadro */
+                                      /*margin-top: 10px; /* Espacio superior entre la imagen y el cuadro */
+                                      clear: right; /* Asegura que el cuadro no flote a la derecha de la imagen */
+                                      flex: 0;
+                                      align-items: right;
+                                    }
+                                                    
+                                    .izquierda3 {
+                                    flex: 0; /* Ocupa todo el espacio disponible a la izquierda */
+                                    padding: 20px;
+                                    background-color: #31c7c7; /* Fondo gris claro */
+                                    }
+                                    .cuadro-derecha {
+                                    width: 600px; /* Ancho fijo para el cuadro */
+                                    padding: 20px;
+                                    background-color: #172221; /* Fondo oscuro */
+                                    color: #fff; /* Texto blanco */
+                                    }
+                                    .boton {
+                                    border: 1px solid #dd8b11; /*anchura, estilo y color borde*/
+                                    padding: 10px; /*espacio alrededor texto*/
+                                    background-color: #df7913; /*color botón*/
+                                    color: #ffffff; /*color texto*/
+                                    text-decoration: none; /*decoración texto*/
+                                    text-transform: uppercase; /*capitalización texto*/
+                                    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+                                    border-radius: 50px; /*bordes redondos*/
+                                    }
+                                    .cuadro4 {
+                                    width: 30%; /* Establece el ancho de cada cuadro */
+                                    display: inline-block;
+                                    margin: 20px;
+                                    padding: 60px;
+                                    border: 1px solid #ffffff;
+                                    background-color: #cac6c6;
+                                    text-align: center;
+                                    }
+                                    .division-cuadros {
+                                    display: flex; /* Utiliza flexbox para centrar los cuadros horizontalmente */
+                                    justify-content: center; /* Centra horizontalmente los cuadros */
+                                    align-items: center; /* Centra verticalmente los cuadros */
+                                    height: 300px; /* Ajusta la altura de la división según tus necesidades */
+                                     }  
+                                     .cuadro5 {
+                                    width: 30%; /* Establece el ancho de cada cuadro */
+                                    display: inline-block;
+                                    margin: 20px;
+                                    padding: 40px;
+                                    border: 1px solid #ffffff;
+                                    background-color: #ffffff;
+                                    text-align: center;
+                                    }
+                                    .div1 {
+                                    background-color: #ffffff;
+                                    margin-bottom: 20px; /* Agrega un margen de 20 píxeles en la parte inferior */
+                                    color: #ffffff;
+                                    }
+                                    .cuadro6 {
+                                    width: 30%; /* Establece el ancho de cada cuadro */
+                                    display: inline-block;
+                                    margin: 20px;
+                                    padding: 40px;
+                                    border: 1px solid #ffffff;
+                                    background-color: #dad7d7;
+                                    text-align: center;
+                                    margin: 0 auto;
+                                    }
+                                     
+            </style>
+
+
+        
+
+        
+        <body>
+            <div>
+            <ul >
+                <li class="imagen-izquierda">
+                  <img src=".\imagenes\main-logo.jpg" alt="logo">
+                </li>
+                <li><a href="#graduados">graduados</a></li>
+                <li><a href="#estudiantes">estudiantes</a></li>
+                <li><a href="#Estado de admisión">Estado de admisión</a></li>
+                <li><a href="#Reingresos">Reingresos</a></li>
+                <li><a href="#Pago en línea">Pago en línea</a></li>
+                <li><a href="#Aplicativo">Aplicativo</a></li>
+                <li><a href="#Emisora">Emisora</a></li>
+                <li><a href="#Blog">Blog</a></li>
+            </ul>
+              
+            <ul>
+                <li class="imagen-izquierda" align="left" style="font-size: 40px;" ></li>
+                <li><a href="#La institucion">La institucion</a></li>
+                <li><a href="#Estudia con nosotros">Estudia con nosotros</a></li>
+                <li><a href="#Facultades">Facultades</a></li>
+                <li><a href="#Programas">Programas</a></li>
+                <li><a href="#Nuevo campus">Nuevo campus</a></li>
+                <li><a href="#SENA">SENA</a></li>
+                <li><a href="#Zona financiera">Zona financiera</a></li>
+                <li><a href="#EdTech">EdTech</a></li>
+            </ul>
+            </div>
+            <div>
+
+                <p><img align="right" src="C:\Users\SERGIO\Downloads\Nueva carpeta\imagenes\ingenieria-software-ucompensar.JPG" alt="ingenieria-software-ucompensar" width="700" height="900"></p>
+                    <p>
+                        <h4 class="centrado" align="left" style="font-size: 15px;">Presencial</h4>
+                    </p>
+                    <p>
+                        <h2 class="centrado" align="left" style="font-size: 34px;">Ingeniería de Software – Bogotá</h2>
+                    </p>
+                    
+
+                    <p class="centrado" align="left" style="font-size: 20px;">Desarrolla soluciones de software y conviértete en un líder 
+                            digital de uno de los sectores con mayor crecimiento del mercado. 
+                            Obtén tres titulaciones a lo largo de tu formación
+                    </p>
+
+     
+                            
+                    <p><a class="boton" href="http://laweb.com" target="_blank">Inscribete aqui</a>
+                    </p>
+                            
+
+                        <form action="procesar.php" method="post">
+                            <div class="form-container">
+                                <div class="form-column">
+                                    <label for="estudiantenuevo">Eres estudiante nuevo:</label>
+                                    <select id="estudiantenuevo" name="estudiantenuevo">
+                                    <option value="Ninguno">--Ninguno--</option>
+                                    <option value="Si">Si</option>
+                                    <option value="No">No</option>
+                                    </select>
+                                    <br><br>
+                                </div>
+                                <div class="form-column">
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" id="nombre" name="nombre" required>
+                                    <br><br> 
+                                </div>
+                                <div class="form-column">
+                                    <label for="nombre">Apellido:</label>
+                                    <input type="text" id="nombre" name="nombre" required>
+                                    <br><br>
+                                </div>
+                                <div class="form-column">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <br><br>
+                                </div>
+                                <div class="form-column">
+                                    <label for="email">Numero de contacto:</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <br><br>
+                                </div>
+                                <div class="form-column">
+                                    <label for="email">Numero de documento:</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <br><br>
+                                </div>
+
+                                <div class="form-column">
+                                    <label for="comoseentero">Como se entero:</label>
+                                    <select id="comoseentero" name="comoseentero">
+                                      <option value="verde">--Ninguno--</option>
+                                      <option value="rojo">Buscadores (Google,bing,safari)</option>
+                                      <option value="verde">publicidad</option>
+                                      <option value="verde">Redes sociales</option>
+                                      <option value="verde">Recomendación de un amigo</option>
+                                      <option value="verde">Correo</option>
+                                      <option value="verde">Llamada</option>
+                                      <option value="verde">Evento-feria</option>
+                                      <option value="verde">Visita a la U</option>
+                                      <option value="verde">Radio</option>
+                                      <option value="verde">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="form-column">
+                                    <input type="checkbox" id="terminos" name="terminos" required>
+                                    <label for="terminos">Autorizo Habeas data</a>.</label>
+                                    <br><br>
+                                </div>
+
+
+                            </div>
+                                  <input align="left" type="submit" value="Enviar">                                
+                        </form>
+            </div>
+            <div>
+                <p><div class="cuadro3" align="center">
+                <div class="derecha3">
+                    <b>SNIES:</b>109130 <b>Resolución:</b>9058 del 28 de agosto de 2019
+                        <b>Duración del programa:</b>10 semestres
+                        <b>Facultad de:</b>Ingeniería
+                        <b>Años de vigencia:</b>7 años
+                        <b>Jornada diurna:</b>7:00 a.m. a 1:00 p.m.
+                        <b>Jornada nocturna:</b>6:00 p.m. a 10:00 p.m.
+                        <b>Valor primer semestre:</b>$ 3.836.800
+                        <b>Ver tarifas de créditos:</b>Aquí
+                </p>
+            </div>  
+        </div>          
+            <div>
+                <p>
+                    <h1 class="centrado" align="center" style="font-size: 40px;">Titulaciones</h1>
+                </p>
+                <div class="division-cuadros">
+                    <div class="cuadro4">
+                      <h3>Técnica Profesional en</h3>
+                      <h1 class="centrado" align="center" style="font-size: 20px;">PROGRAMACIÓN DE APLICACIONES DE SOFTWARE</h1>
+                      <p>Resolución 9059 del 28 de agosto de 2019
+                        Años de vigencia: 7 años
+                        SNIES: 108334
+                        </p>
+                        <a href="http://laweb.com">Ver tarifas de créditos aquí</a>
+                    </div>
+                    <div class="cuadro4">
+                        <h3>Tecnología en</h3>
+                        <h1 class="centrado" align="center" style="font-size: 20px;">DESARROLLO DE APLICACIONES WEB Y MÓVILES</h1>
+                        <p>Resolución 9057 del 28 de agosto de 2019
+                            Años de vigencia: 7 años
+                            SNIES: 108335
+                          </p>
+                          <a href="http://laweb.com">Ver tarifas de créditos aquí</a>
+                      </div>
+                      <div class="cuadro4">
+                        <h3>Profesional en</h3>
+                        <h1 class="centrado" align="center" style="font-size: 20px;">INGENIERÍA DE SOFTWARE</h1>
+                        <p>Resolución 9058 del 28 de agosto de 2019
+                            Años de vigencia: 7 años
+                            SNIES: 109130                            
+                          </p>
+                          <a href="http://laweb.com">Ver tarifas de créditos aquí</a>
+                      </div>
+            </div>
+            <div class="div1">
+                 c
+              </div>
+              <div class="div1">
+                c
+             </div>
+             <div class="div1">
+                c
+             </div>
+             <div class="div1">
+                c
+             </div>
+            <div>
+
+                <div class="division-cuadros">
+                    <div class="cuadro5">
+                     
+                      <h1 class="left" align="center" style="font-size: 30px;">CAMPO LABORAL</h1>
+                      <p><p align="center" style="font-size: 10px;">·Ingeniero de calidad.</p>
+                      <p align="center" style="font-size: 10px;">·Ingeniero de requerimientos.</p>
+                      <p align="center" style="font-size: 10px;">·Gerente de proyectos de software.</p>
+                      <p align="center" style="font-size: 10px;">·Líder de desarrollo de software.</p>
+                      <p align="center" style="font-size: 10px;">·Desarrollador de software web.</p>
+                      <p align="center" style="font-size: 10px;">·Integrador de soluciones web y móviles.</p>
+                      <p align="center" style="font-size: 10px;">·Desarrollador de aplicaciones móviles.</p>
+                      <p align="center" style="font-size: 10px;">·Líder Técnico de pruebas</p>
+                        </p>
+                        <a href="http://laweb.com">Ver tarifas de créditos aquí</a>
+                    </div>
+                    <div class="cuadro5">
+
+                        <img align="right" src=".\imagenes\programadora-software-ucompensar.jpg" alt="programadora-software-ucompensar" width="267" height="267">
+
+
+                      </div>
+                      <div class="cuadro5">
+
+                        <img align="right" src=".\imagenes\Ingeniero-de-requerimientos-ucompensar.JPG" alt="Ingeniero-de-requerimientos-ucompensar" width="267" height="267">
+
+
+                      </div>
+            </div>
+            <div class="div1">
+                c
+             </div>
+             <div class="div1">
+               c
+            </div>
+            <div class="div1">
+               c
+            </div>
+            <div class="div1">
+               c
+            </div>
+            <div>
+                  <div class="cuadro6">
+                    <h1 class="centrado" align="center" style="font-size: 50px;">Matrículas Abiertas</h1>
+                    <h2 class="centrado" align="center" style="font-size: 20px;">
+                        Somos la institución universitaria para todos y nuestro objetivo es integrar a la comunidad con el sector productivo para afrontar los desafíos del futuro.                         
+                    </h2>
+                    </p>
+                  </div>
+            </div> 
+            <div class="div1">
+                c
+             </div>
+             <div class="div1">
+               c
+            </div>
+            <div class="div1">
+               c
+            </div>
+            <div class="div1">
+               c
+            </div>
+            
+ 
+        </body>
+    </head>
+</html>
